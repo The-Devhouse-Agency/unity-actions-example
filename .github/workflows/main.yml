@@ -132,6 +132,9 @@ jobs:
     needs: buildForMac
     name: Build for ${{ matrix.targetPlatform }}
     runs-on: windows-2019
+    defaults:
+      run:
+        working-directory: ./build
     strategy:
       fail-fast: false
       matrix:
